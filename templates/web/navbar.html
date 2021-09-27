@@ -4,10 +4,8 @@
     <div class="container">
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="{% url 'home' %}"><img src="{% static 'images/logo.svg' %}" alt="alternative"></a>
-
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text" href="index.html">Zinc</a> -->
+        <a class="navbar-brand logo-text" href="{% url 'home' %}"> <img src="{% static 'images/logo.png' %}"
+                alt="images/logo.svg"></a>
 
         <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
             aria-label="Toggle navigation">
@@ -30,7 +28,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                        aria-expanded="false">Drop</a>
+                        aria-expanded="false">About</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
                         <li><a class="dropdown-item" href="{% url 'article' %}">Article Details</a></li>
                         <li>
@@ -45,7 +43,7 @@
                 </li>
             </ul>
             <span class="nav-item">
-                <a class="btn-solid-sm" href="{% url 'home' %}#contact">Get quote</a>
+                <a class="btn-solid-sm" href="{% url 'home' %}#contact">Buyurtma berish</a>
             </span>
         </div> <!-- end of navbar-collapse -->
     </div> <!-- end of container -->

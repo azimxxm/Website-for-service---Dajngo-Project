@@ -3,21 +3,21 @@
 <div class="counter">
     <div class="container">
         <div class="row">
+            {% for service_about2 in service_about2 %}
             <div class="col-lg-6 col-xl-5">
                 <div class="text-container">
-                    <h2><span>Awesome websites</span><br> built with tons of love</h2>
-                    <p>In gravida vitae nulla vitae tincidunt imperdiet ante. Pellentesque aliquet mi eu tortor dictum,
-                        non imperdiet ante viverra. Phasellus eget enim orci flig rine bilo</p>
+                    <h2>{{ service_about2.title }}</h2>
+                    <p>{{ service_about2.info_title }}</p>
 
                     <!-- Counter -->
                     <div class="counter-container">
                         <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="2"
+                            <div data-purecounter-start="0" data-purecounter-end="{{ service_about2.happy_customers }}" data-purecounter-duration="2"
                                 class="purecounter">1</div>
                             <div class="counter-info">Happy Customers</div>
                         </div> <!-- end of counter-cell -->
                         <div class="counter-cell red">
-                            <div data-purecounter-start="0" data-purecounter-end="1380" data-purecounter-duration="2"
+                            <div data-purecounter-start="0" data-purecounter-end="{{ service_about2.issues_solved }}" data-purecounter-duration="2"
                                 class="purecounter">1</div>
                             <div class="counter-info">Issues Solved</div>
                         </div> <!-- end of counter-cell -->
@@ -28,9 +28,10 @@
             </div> <!-- end of col -->
             <div class="col-lg-6 col-xl-7">
                 <div class="image-container">
-                    <img class="img-fluid" src="{% static 'images/details-2.svg' %}" alt="alternative">
+                    <img class="img-fluid" src="{{ service_about2.image.url  }}" alt="alternative">
                 </div> <!-- end of image-container -->
             </div> <!-- end of col -->
+            {% endfor %}
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 </div> <!-- end of counter -->

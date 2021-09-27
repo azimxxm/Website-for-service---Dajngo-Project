@@ -18,29 +18,32 @@
             <div class="col-lg-10 offset-lg-1">
 
                 <!-- Contact Form -->
-                <form>
+                <form method="POST">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Name" required>
+                        {{ form.name }}
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control-input" placeholder="Email" required>
+                        {{ form.phone }}
                     </div>
                     <div class="form-group">
-                        <select class="form-control-select" required>
-                            <option class="select-option" value="" disabled selected>Project type</option>
-                            <option class="select-option" value="Company Website">Company Website</option>
-                            <option class="select-option" value="Landing Page">Landing Page</option>
-                            <option class="select-option" value="Online Shop">Online Shop</option>
-                        </select>
+                        {{ form.email }}
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control-textarea" placeholder="Message" required></textarea>
+                        {{ form.work_tpye }}
                     </div>
+                    <div class="form-group">
+                        {{ form.message }}
+                    </div> 
                     <div class="form-group">
                         <button type="submit" class="form-control-submit-button">Submit</button>
-                    </div>
+                    </div> 
                 </form>
                 <!-- end of contact form -->
+
+
+
+
 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
