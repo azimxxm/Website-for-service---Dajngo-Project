@@ -87,8 +87,8 @@ class Service_modal(models.Model):
 
 
 class Service_about2(models.Model):
-    title = models.CharField(max_length=50)
-    info_title = models.TextField(max_length=200)
+    title = models.CharField(max_length=100)
+    info_title = models.TextField(max_length=220)
     happy_customers = models.IntegerField(default=0)
     issues_solved = models.IntegerField(default=0)
     image = models.ImageField(upload_to="Service_about2/%Y/%M/")
@@ -157,7 +157,7 @@ class Plan_type(models.Model):
 
 
 class Pricing(models.Model):
-    plan_name = models.CharField(max_length=12)
+    plan_name = models.CharField(max_length=20)
     plan_types = models.ManyToManyField(Plan_type)
     plan_price = models.BigIntegerField(default=0)
     date_entered = models.DateTimeField(auto_now_add=True)

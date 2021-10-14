@@ -11,21 +11,21 @@ class CommentForm(ModelForm):
         widgets = {
             "name":TextInput(attrs={
                 'class':'form-control-input',
-                'placeholder':'Name'
+                'placeholder':'Ismingiz'
             }),
             "phone":NumberInput(attrs={
                 'class': 'form-control-input',
-                'placeholder': 'Phone'
+                'placeholder': 'Teelfon raqamingiz'
             }),
             "email":EmailInput(attrs={
                 'class': 'form-control-input',
-                'placeholder': 'E-mail'
+                'placeholder': 'E-mail manzilingiz'
             }),
             "work_tpye":Select(attrs={
                 'class': 'form-control-select',
             }),
             "message":Textarea(attrs={
                 'class': 'form-control-textarea',
-                'placeholder': 'Your message..'
+                'placeholder': 'Bizga habar yuboring...'
             }),
         }

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
 from .models import *
 
-admin.site.site_header = "Hush kelibsiz Admin Dashboard Paneliga!!!"
+admin.site.site_header = "Hush kelibsiz Admin portalga!!!"
 admin.site.site_title = "Sayt ma'muriyati"
 
 admin.site.register(Advantages)
